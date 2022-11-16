@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", "Arial", sans-serif;
+    color: #262626;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+header {
+    background-color: #FED7AA;
+}
+
+.header-bar {
+    padding: 20px 40px;
+}
+
+.header-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    padding: 90px 40px;
+}
+
+#header-headline {
+    color: #EA580C;
+    letter-spacing: -0.1rem;
+}
