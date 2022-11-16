@@ -7,12 +7,33 @@ body {
 
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h2 {
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+h3 {
+    font-family: "Pacifico", "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stats h1 {
+    margin: 0;
+}
+
+#achievements h3 {
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -35,4 +56,22 @@ header {
 #header-headline {
     color: #EA580C;
     letter-spacing: -0.1rem;
+}
+
+#achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    background-color: #FFEDD5;
+    padding: 40px 40px;
+}
+
+.stats {
+    display: flex;
+    gap: 70px;
+}
+
+.stat-card {
+    text-align: center;
 }
