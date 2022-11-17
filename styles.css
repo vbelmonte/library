@@ -101,3 +101,7 @@ nav ul {
 .stat-card {
     text-align: center;
 }
+
+.stat-card h1 {
+    color: #EA580C;
+}
