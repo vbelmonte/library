@@ -69,7 +69,7 @@ header {
     align-items: center;
     gap: 30px;
 
-    padding: 80px 80px;
+    padding: 80px 160px;
 }
 
 nav ul {
@@ -90,7 +90,7 @@ nav ul {
     gap: 40px;
     align-items: center;
     background-color: #FFEDD5;
-    padding: 80px 80px;
+    padding: 80px 160px;
 }
 
 .stats {
@@ -104,4 +104,63 @@ nav ul {
 
 .stat-card h1 {
     color: #EA580C;
+}
+
+#library {
+    background-color: #FFF7ED;
+    padding: 80px 160px;
+}
+
+.library-sort {
+    display: flex;
+}
+
+.library-sort h3 {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    margin: 40px 0px;
+
+    /*background-color: pink;*/
+}
+
+.book-card {
+    background-color: orange;
+    border: solid 1px #D1D5DB;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book-card .cover {
+    text-align: center;
+    height: 350px;
+}
+
+.book-card .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: #FAF9F9;
+    line-height: 1.5rem;
+    padding: 10px;
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.book-card .description .pages-genre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-card p {
+    margin: 0;
+}
+
+p.title {
+    font-weight: 700;
 }
