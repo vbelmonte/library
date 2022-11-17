@@ -27,6 +27,10 @@ h4 {
     margin: 0;
 }
 
+a {
+    color: #EA580C;
+}
+
 .stats h1 {
     margin: 0;
 }
@@ -41,7 +45,22 @@ header {
 }
 
 .header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
+}
+
+.header-nav-account {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.account {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .header-cta {
@@ -50,7 +69,14 @@ header {
     align-items: center;
     gap: 30px;
 
-    padding: 90px 40px;
+    padding: 80px 80px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
 }
 
 #header-headline {
@@ -64,7 +90,7 @@ header {
     gap: 40px;
     align-items: center;
     background-color: #FFEDD5;
-    padding: 40px 40px;
+    padding: 80px 80px;
 }
 
 .stats {
