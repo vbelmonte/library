@@ -240,6 +240,20 @@ p.title {
     background-color: #374151;
     color: #FAF9F9;
     text-align: center;
-    line-height: 1.5rem;
-    font-size: 0.875rem;
+    line-height: 2rem;
+}
+
+footer {
+    background-color: #262626;
+    color: #FAF9F9;
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+}
+
+footer img {
+    filter: invert(99%) sepia(4%) saturate(0%) hue-rotate(351deg) brightness(105%) contrast(95%);
+    width: 30px;
+    height: 30px;
 }
