@@ -106,6 +106,16 @@ button {
     padding: 0;
 }
 
+hr {
+    border-top: solid 1px;
+    width: 7.5rem;
+    margin: 10px auto;
+}
+
+#achievements hr {
+    border-color: #262626;
+}
+
 header {
     background-color: #FED7AA;
 }
@@ -160,7 +170,7 @@ nav ul {
 #achievements {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
     background-color: #FFEDD5;
 }
@@ -252,7 +262,7 @@ footer {
     line-height: 1.25rem;
 }
 
-footer img {
+footer .github-logo {
     filter: invert(99%) sepia(4%) saturate(0%) hue-rotate(351deg) brightness(105%) contrast(95%);
     width: 30px;
     height: 30px;
