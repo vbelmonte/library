@@ -15,7 +15,7 @@ function addBookToLibrary(book) {
 
 }
 
-/*function removeNoBooksWindow() {
+function removeNoBooksWindow() {
     //if myLibrary is non-empty, remove "No Books" window
     if ( !(myLibrary.length === 0) ) {
         console.log("non-empty array");
@@ -28,24 +28,33 @@ function addBookToLibrary(book) {
     }
 }
 
-function makeBookCardElement(bookEntry) {
+function addCardToLibraryGrid(card) {
+    document.getElementsByClassName("grid-container")[0].appendChild(card);
+
+}
+
+/*function makeBookCardElement(bookEntry) {
     let testDiv = document.createElement("div");
     let testContent = document.createTextNode("test card");
 
     testDiv.appendChild(testContent);
 
-}
+}*/
 
-function addCardToLibraryGrid(card) {
-    document.getElementsByClassName("grid-container")[0].appendChild(card);
-}
+/*function createBookCardCoverElement() {
 
-function createBookCardCoverElement() {
+}*/
 
-}
+function createBookCardDescriptionElement(book) {
+    let descriptionElement = document.createElement("div");
+    let titleAuthorDateElement = createTitleAuthorDateElement(book);
+    let pagesGenreElement = createPagesGenreElement(book);
 
-function createBookCardDescriptionElement() {
+    descriptionElement.classList.add("description");
+    descriptionElement.appendChild(titleAuthorDateElement);
+    descriptionElement.appendChild(pagesGenreElement);
 
+    return descriptionElement;
 }
 
 function createBookCardAuthorElement(authorName) {
@@ -76,4 +85,58 @@ function createBookCardPublishDateElement(publishDate) {
     paragraph.classList.add("publication-date");
 
     return paragraph;
-}*/
+}
+
+function createTitleAuthorDateElement(book) {
+    let div = document.createElement("div");
+    let authorElement = createBookCardAuthorElement(book.author);
+    let titleElement = createBookCardTitleElement(book.title);
+    let publishDateElement = createBookCardPublishDateElement(book.publicationDate);
+
+    div.classList.add("title-author-date");
+    div.appendChild(titleElement);
+    div.appendChild(authorElement);
+    div.appendChild(publishDateElement);
+
+    return div;
+}
+
+function createPagesGenreElement(book) {
+    let div = document.createElement("div");
+    let pagesElement = createBookCardPagesElement(book.pages);
+    let genreElement = createBookCardGenreElement(book.genre);
+
+    div.classList.add("pages-genre");
+    div.appendChild(pagesElement);
+    div.appendChild(genreElement);
+
+    return div;
+}
+
+function createBookCardPagesElement(pages) {
+    let div = document.createElement("div");
+    let paragraph = document.createElement("p");
+    let span = document.createElement("span");
+    let numberOfPages = document.createTextNode(pages);
+    let text = document.createTextNode(" pages");
+
+    span.appendChild(numberOfPages);
+    span.classList.add("pages");
+    paragraph.appendChild(span);
+    paragraph.appendChild(text);
+    div.appendChild(paragraph);
+
+    return div;
+}
+
+function createBookCardGenreElement(genreName) {
+    let div = document.createElement("div");
+    let paragraph = document.createElement("p");
+    let genre = document.createTextNode(genreName);
+
+    paragraph.appendChild(genre);
+    paragraph.classList.add("genre");
+    div.appendChild(paragraph);
+
+    return div;
+}
