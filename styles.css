@@ -88,6 +88,7 @@ button {
     border-style: none;
     font-family: "Josefin Sans", "Arial", sans-serif;
     font-size: 1rem;
+    transition: linear 0.1s;
 }
 
 .lg-btn {
@@ -97,12 +98,22 @@ button {
     padding: 16px 20px;
 }
 
+.lg-btn:hover {
+    background-color: #c2410c;
+}
+
 .md-btn {
     border: solid 1px #EA580C;
     background-color: transparent;
     font-weight: 400;
     color: #EA580C;
     padding: 12px;
+}
+
+.md-btn:hover {
+    border: solid 1px #EA580C;
+    background-color: #EA580C;
+    color: #FAF9F9;
 }
 
 .stats h1 {
