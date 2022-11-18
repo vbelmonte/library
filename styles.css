@@ -97,6 +97,14 @@ button {
     padding: 16px 20px;
 }
 
+.md-btn {
+    border: solid 1px #EA580C;
+    background-color: transparent;
+    font-weight: 400;
+    color: #EA580C;
+    padding: 12px;
+}
+
 .stats h1 {
     margin: 0;
 }
@@ -161,10 +169,18 @@ nav ul {
     list-style: none;
 }
 
-#header-headline {
+#header-headline, .no-books h1 {
     color: #EA580C;
     letter-spacing: -0.1rem;
     margin: 0;
+}
+
+.no-books h1 {
+    font-size: 2rem;
+}
+
+.no-books h2 {
+    font-size: 1rem;
 }
 
 #achievements {
@@ -245,6 +261,11 @@ nav ul {
 
 p.title {
     font-weight: 700;
+}
+
+.no-books {
+    text-align: center;
+    margin: 40px;
 }
 
 #about {
