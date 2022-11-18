@@ -57,7 +57,7 @@ function createBookCardDescriptionElement(book) {
     return descriptionElement;
 }
 
-function createBookCardAuthorElement(authorName) {
+function createAuthorElement(authorName) {
     let paragraph = document.createElement("p");
     let name = document.createTextNode(authorName);
 
@@ -67,7 +67,7 @@ function createBookCardAuthorElement(authorName) {
     return paragraph;
 }
 
-function createBookCardTitleElement(bookTitle) {
+function createTitleElement(bookTitle) {
     let paragraph = document.createElement("p");
     let title = document.createTextNode(bookTitle);
 
@@ -77,7 +77,7 @@ function createBookCardTitleElement(bookTitle) {
     return paragraph;
 }
 
-function createBookCardPublishDateElement(publishDate) {
+function createPublishDateElement(publishDate) {
     let paragraph = document.createElement("p");
     let date = document.createTextNode(publishDate);
 
@@ -89,9 +89,9 @@ function createBookCardPublishDateElement(publishDate) {
 
 function createTitleAuthorDateElement(book) {
     let div = document.createElement("div");
-    let authorElement = createBookCardAuthorElement(book.author);
-    let titleElement = createBookCardTitleElement(book.title);
-    let publishDateElement = createBookCardPublishDateElement(book.publicationDate);
+    let authorElement = createAuthorElement(book.author);
+    let titleElement = createTitleElement(book.title);
+    let publishDateElement = createPublishDateElement(book.publicationDate);
 
     div.classList.add("title-author-date");
     div.appendChild(titleElement);
@@ -103,8 +103,8 @@ function createTitleAuthorDateElement(book) {
 
 function createPagesGenreElement(book) {
     let div = document.createElement("div");
-    let pagesElement = createBookCardPagesElement(book.pages);
-    let genreElement = createBookCardGenreElement(book.genre);
+    let pagesElement = createPagesElement(book.pages);
+    let genreElement = createGenreElement(book.genre);
 
     div.classList.add("pages-genre");
     div.appendChild(pagesElement);
@@ -113,7 +113,7 @@ function createPagesGenreElement(book) {
     return div;
 }
 
-function createBookCardPagesElement(pages) {
+function createPagesElement(pages) {
     let div = document.createElement("div");
     let paragraph = document.createElement("p");
     let span = document.createElement("span");
@@ -129,7 +129,7 @@ function createBookCardPagesElement(pages) {
     return div;
 }
 
-function createBookCardGenreElement(genreName) {
+function createGenreElement(genreName) {
     let div = document.createElement("div");
     let paragraph = document.createElement("p");
     let genre = document.createTextNode(genreName);

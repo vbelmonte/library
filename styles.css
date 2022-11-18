@@ -233,8 +233,6 @@ nav ul {
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     margin: 40px 0px;
-
-    /*background-color: pink;*/
 }
 
 .book-card {
@@ -244,12 +242,12 @@ nav ul {
     overflow: hidden;
 }
 
-.book-card .cover {
+.book-card .cover, .cover {
     text-align: center;
     height: 350px;
 }
 
-.book-card .description {
+.book-card .description, .description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -261,12 +259,12 @@ nav ul {
     max-height: 120px;
 }
 
-.book-card .description .pages-genre {
+.book-card .description .pages-genre, .pages-genre {
     display: flex;
     justify-content: space-between;
 }
 
-.book-card p {
+.book-card p, .description p {
     margin: 0;
 }
 
