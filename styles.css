@@ -277,6 +277,7 @@ p.title {
 .no-books {
     text-align: center;
     margin: 40px;
+    transition: linear 0.1s;
 }
 
 #about {
