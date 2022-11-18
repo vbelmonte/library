@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library | My Books</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-bar">
+                <div class="header-logo">
+                    <img src="images/my_books_logo.png">
+                </div>
+                <div class="header-nav-account">
+                    <div class="header-nav">
+                        <nav>
+                            <ul>
+                                <li><a href="#achievements">Achievements</a></li>
+                                <li><a href="#library">Library</a></li>
+                                <li><a href="#about">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-account">
+                        <a href="https://github.com/vbelmonte" target="_blank"><img class="account" src="images/github_icon.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-cta">
+                <div class="header-image">
+                    <img src="images/Illustration_Reading.png">
+                </div>
+                <div class="header-text">
+                    <h1 id="header-headline">A web-based library to keep track of your books</h1>
+                    <h2>Whether you're a new or returning user, add a book you've read or wish to read!</h2>
+                    <button class="lg-btn">Add A Book</button>
+                </div>
+            </div>
+        </header>
+        <section id="achievements">
+            <div>
+                <h3>Your Achievements</h3>
+            </div>
+            <hr>
+            <div class="stats">
+                <div class="stat-card">
+                    <div>
+                        <h1 id="your-books">0</h1>
+                    </div>
+                    <div>
+                        <h4>Your Books</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <h1 id="books-read">0</h1>
+                    </div>
+                    <div>
+                        <h4>Books Read</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <h1 id="in-progress">0</h1>
+                    </div>
+                    <div>
+                        <h4>Books In Progress</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <h1 id="pages-read">0</h1>
+                    </div>
+                    <div>
+                        <h4>Pages Read</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="library">
+            <div class="library-sort">
+                <div>
+                    <h3>Your Library</h3>
+                </div>
+            </div>
+            <!-- <div class="grid-container">
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p class="pages">432</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p><span class="pages">432</span> pages</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p><span class="pages">432</span> pages</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p><span class="pages">432</span> pages</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p><span class="pages">432</span> pages</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="cover">
+                    </div>
+                    <div class="description">
+                        <div>
+                            <p class="title">Pride And Prejudice</p>
+                            <p class="author">Jane Austen</p>
+                            <p class="publication-date">1813</p>
+                        </div>
+                        <div class="pages-genre">
+                            <div>
+                                <p><span class="pages">432</span> pages</p>
+                            </div>
+                            <div>
+                                <p class="genre">Fiction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="no-books">
+                <h1>You currently have no books!</h1>
+                <h2>Click the "add" button below to add a book.</h2>
+                <button class="md-btn">Add Book</button>
+            </div>
+        </section>
+        <section id="about">
+            <div>
+                <div>
+                    <h3>About This Site</h3>
+                </div>
+                <hr>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere morbi leo urna molestie at elementum eu facilisis. Massa ultricies mi quis hendrerit dolor magna eget est. Neque aliquam vestibulum morbi blandit cursus risus at. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Duis at tellus at urna condimentum mattis pellentesque. Justo laoreet sit amet cursus sit amet.</p>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <img src="images/my_books_logo_white.png">
+            </div>
+            <hr>
+            <div>
+                <a href="https://github.com/vbelmonte" target="_blank"><img class="github-logo" src="images/github-logo.svg"></a>
+                <p>Designed and developed by <a href="https://github.com/vbelmonte" target="_blank">Villy Belmonte</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
