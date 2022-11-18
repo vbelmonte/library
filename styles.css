@@ -75,7 +75,7 @@ h3 {
 
 h4 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -186,6 +186,7 @@ nav ul {
 
 .stat-card h1 {
     color: #EA580C;
+    font-size: 1.5rem;
 }
 
 #library {
@@ -251,6 +252,8 @@ p.title {
     color: #FAF9F9;
     text-align: center;
     line-height: 2rem;
+
+    font-weight: 200;
 }
 
 footer {
