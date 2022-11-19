@@ -33,19 +33,26 @@ function addCardToLibraryGrid(card) {
 
 }
 
-/*function makeBookCardElement(bookEntry) {
-    let testDiv = document.createElement("div");
-    let testContent = document.createTextNode("test card");
+function makeBookCard(book) {
+    let cardElement = document.createElement("div");
+    let coverElement = createBookCoverElement();
+    let descriptionElement = createBookDescriptionElement(book);
 
-    testDiv.appendChild(testContent);
+    cardElement.classList.add("book-card");
+    cardElement.appendChild(coverElement);
+    cardElement.appendChild(descriptionElement);
 
-}*/
+    return cardElement;
+}
 
-/*function createBookCardCoverElement() {
+function createBookCoverElement() {
+    let div = document.createElement("div");
+    div.classList.add("cover");
 
-}*/
+    return div;
+}
 
-function createBookCardDescriptionElement(book) {
+function createBookDescriptionElement(book) {
     let descriptionElement = document.createElement("div");
     let titleAuthorDateElement = createTitleAuthorDateElement(book);
     let pagesGenreElement = createPagesGenreElement(book);
