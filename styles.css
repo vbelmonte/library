@@ -83,12 +83,15 @@ a {
     color: #EA580C;
 }
 
+button, .add-card {
+    transition: linear 0.1s;
+}
+
 button {
     border-radius: 4px;
     border-style: none;
     font-family: "Josefin Sans", "Arial", sans-serif;
     font-size: 1rem;
-    transition: linear 0.1s;
 }
 
 .lg-btn {
@@ -235,10 +238,29 @@ nav ul {
     margin: 40px 0px;
 }
 
+.card {
+    border-radius: 8px;
+}
+
+.add-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #374151;
+    height: 492px;
+}
+
+.add-card:hover {
+    background-color: #1f2937;
+}
+
+.add-card svg {
+    color: #FAF9F9;
+}
+
 .book-card {
     background-color: orange;
     border: solid 1px #D1D5DB;
-    border-radius: 8px;
     overflow: hidden;
 }
 
