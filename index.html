@@ -40,7 +40,7 @@
                 <div class="header-text">
                     <h1 id="header-headline">A web-based library to keep track of your books</h1>
                     <h2>Whether you're a new or returning user, add a book you've read or wish to read!</h2>
-                    <button class="lg-btn">Add A Book</button>
+                    <button class="lg-btn orange-btn">Add A Book</button>
                 </div>
             </div>
         </header>
@@ -84,6 +84,95 @@
                 </div>
             </div>
         </section>
+        <div id="myModal" class="add-book-modal">
+            <div class="modal-content">
+                <div class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>     
+                </div>
+                <div>
+                    <h3>Add A Book</h3>
+                </div>
+                <div class="input-fields">
+                    <form method="post">
+                        <div>
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" placeholder="Book Title" required>
+                        </div>
+                        <div>
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author" placeholder="Author" required>
+                        </div>
+                        <div class="publication-pages">
+                            <div>
+                                <label for="publication-year">Publication Year</label>
+                                <input type="text" id="publication-year" name="publication_year" placeholder="Publication Year" required>
+                            </div>
+                            <div>
+                                <label for="number-of-pages">Number Of Pages</label>
+                                <input type="text" id="number-of-pages" name="number_of_pages" placeholder="0" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="genre">Genre</label>
+                            <select id="genre" name="genre">
+                                <optgroup label="Fiction">
+                                    <option>Drama</option>
+                                    <option>Fable</option>
+                                    <option value="fairy-tale">Fairy Tale</option>
+                                    <option>Fantasy</option>
+                                    <option selected>Fiction</option>
+                                    <option>Folklore</option>
+                                    <option value="historical-fiction">Historical Fiction</option>
+                                    <option>Horror</option>
+                                    <option>Humor</option>
+                                    <option>Legend</option>
+                                    <option>Mystery</option>
+                                    <option>Mythology</option>
+                                    <option>Poetry</option>
+                                    <option value="realistic-fiction">Realistic Fiction</option>
+                                    <option value="science-fiction">Science Fiction</option>
+                                    <option value="short-story">Short Story</option>
+                                    <option value="tall-tale">Tall Tale</option>
+                                </optgroup>
+                                <optgroup label="Nonfiction">
+                                    <option>Autobiography</option>
+                                    <option>Biography</option>
+                                    <option>Essay</option>
+                                    <option>Narrative</option>
+                                    <option>Nonfiction</option>
+                                    <option>Speech</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <fieldset>
+                                <legend>Status</legend>
+                                <div>
+                                    <div>
+                                        <input type="radio" id="not-read" name="status" value="not-read" checked>
+                                        <label for="not-read">Not Read</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="read" name="status" value="read">
+                                        <label for="read">Read</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="inprogress" name="status" value="in-progress">
+                                        <label for="inprogress">In Progress</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="input-buttons">
+                            <button class="md-btn orange-btn" id="add-book">Add Book</button>
+                            <button class="md-btn red-btn" id="clear">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <section id="library">
             <div class="library-sort">
                 <div>

@@ -95,28 +95,46 @@ button {
 }
 
 .lg-btn {
-    background-color: #EA580C;
     font-weight: 400;
-    color: #FAF9F9;
     padding: 16px 20px;
 }
 
-.lg-btn:hover {
-    background-color: #c2410c;
-}
-
 .md-btn {
-    border: solid 1px #EA580C;
-    background-color: transparent;
     font-weight: 400;
-    color: #EA580C;
     padding: 12px;
 }
 
-.md-btn:hover {
+.orange-btn {
     border: solid 1px #EA580C;
     background-color: #EA580C;
     color: #FAF9F9;
+}
+
+.orange-btn:hover {
+    border-color: #c2410c;
+    background-color: #c2410c;
+}
+
+.orange-outline-btn {
+    border: solid 1px #EA580C;
+    background-color: transparent;
+    color: #EA580C;
+}
+
+.orange-outline-btn:hover {
+    border: solid 1px #EA580C;
+    background-color: #EA580C;
+    color: #FAF9F9;
+}
+
+.red-btn {
+    border: solid 1px #dc2626;
+    background-color: #dc2626;
+    color: #FAF9F9;
+}
+
+.red-btn:hover {
+    background-color: #b91c1c;
 }
 
 .stats h1 {
@@ -327,4 +345,130 @@ footer .github-logo {
     filter: invert(99%) sepia(4%) saturate(0%) hue-rotate(351deg) brightness(105%) contrast(95%);
     width: 30px;
     height: 30px;
+}
+
+/*
+Modal Box
+*/
+
+.add-book-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #FAF9F9;
+    padding: 40px;
+    margin: auto;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+.modal-content svg {
+    color: #262626;
+}
+
+.add-book-modal h3 {
+    color: #EA580C;
+    text-align: center;
+}
+
+.add-book-modal .close {
+    text-align: right;
+}
+
+
+/*
+Modal Box Input Forms
+*/
+
+label, legend {
+    font-size: 0.875rem;
+    color: #374151;
+    padding: 4px 0px;
+}
+
+input[type=text] {
+    appearance: none;
+}
+
+input[type=text], select {
+    border: solid 1px #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+
+    font-family: "Josefin Sans", "Arial", sans-serif;
+    font-size: 1rem;
+    color: #262626;
+}
+
+option {
+    padding: 8px;
+}
+
+form > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-pages > div
+ {
+    display: flex;
+    flex-direction: column;
+    width: 152px;
+ }
+
+.input-fields form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0px 40px 40px 40px;
+}
+
+.publication-pages {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset label {
+    font-size: 1rem;
+    color: #262626;
+}
+
+fieldset > div {
+    display: flex;
+    gap: 1rem;
+}
+
+form .input-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    margin-top: 20px;
+}
+
+#add-book {
+    flex: 1;
+    flex-shrink: 0;
+}
+
+#clear {
+    flex: 1;
+    flex-shrink: 0;
 }
