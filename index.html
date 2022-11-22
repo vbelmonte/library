@@ -40,7 +40,7 @@
                 <div class="header-text">
                     <h1 id="header-headline">A web-based library to keep track of your books</h1>
                     <h2>Whether you're a new or returning user, add a book you've read or wish to read!</h2>
-                    <button class="lg-btn orange-btn">Add A Book</button>
+                    <button class="lg-btn orange-btn" onclick="openAddModal()">Add A Book</button>
                 </div>
             </div>
         </header>
@@ -87,9 +87,11 @@
         <div id="myModal" class="add-book-modal">
             <div class="modal-content">
                 <div class="close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>     
+                    <div id="close-modal" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </div>     
                 </div>
                 <div>
                     <h3>Add A Book</h3>

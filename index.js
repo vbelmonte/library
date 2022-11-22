@@ -149,3 +149,24 @@ function createGenreElement(genreName) {
 
     return div;
 }
+
+
+/**
+ * Add Book Button
+ */
+
+function openAddModal() {
+    let addBookModal = document.getElementById("myModal");
+    addBookModal.style.display = "flex";
+}
+
+
+/**
+ * Add Book Modal Window Functions
+ */
+
+
+function closeModal() {
+    let addBookModal = document.getElementById("myModal");
+    addBookModal.style.display = "none";
+}

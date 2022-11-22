@@ -94,6 +94,10 @@ button {
     font-size: 1rem;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .lg-btn {
     font-weight: 400;
     padding: 16px 20px;
@@ -382,8 +386,20 @@ Modal Box
 }
 
 .add-book-modal .close {
-    text-align: right;
+    display: flex;
+    justify-content: end;
 }
+
+#close-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-modal:hover {
+    cursor: pointer;
+}
+
 
 
 /*
