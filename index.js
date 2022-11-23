@@ -39,6 +39,21 @@ function addCardToLibraryGrid(card) {
     document.getElementsByClassName("grid-container")[0].appendChild(card);
 }
 
+function clearInputForms() {
+    title.value = "";
+    author.value = "";
+    publicationYear.value = "";
+    pages.value = "";
+    genre.value = "Fiction";
+    uncheckRadioButtons();
+}
+
+function uncheckRadioButtons() {
+    for (i = 0; i < readStatus.length; i++) {
+        readStatus[i].checked = false;
+    }
+}
+
 
 
 
@@ -51,6 +66,8 @@ function processBook() {
     
     addBookToLibrary(bookInfo);
     addCardToLibraryGrid(bookCard);
+    enableSuccessMsg();
+    clearInputForms();
 }
 
 function preventDefaultButton() {
@@ -58,6 +75,14 @@ function preventDefaultButton() {
     addBookButton.addEventListener("click", function(event) {
         event.preventDefault();
     });
+}
+
+function enableSuccessMsg() {
+    document.getElementsByClassName("success-message")[0].style.visibility = "visible";
+}
+
+function disableSuccessMsg() {
+    document.getElementsByClassName("success-message")[0].style.visibility = "hidden";
 }
 
 
@@ -253,6 +278,7 @@ function openAddModal() {
 function closeModal() {
     let addBookModal = document.getElementById("myModal");
     addBookModal.style.display = "none";
+    disableSuccessMsg();
 }
 
 

@@ -377,7 +377,7 @@ Modal Box
     border-radius: 8px;
 }
 
-.modal-content svg {
+.modal-content .close svg {
     color: #262626;
 }
 
@@ -401,6 +401,18 @@ Modal Box
     cursor: pointer;
 }
 
+.modal-content .success-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #15803D;
+    visibility: hidden;
+}
+
+.modal-content .success-message p {
+    font-size: 0.875rem;
+    line-height: 0;
+}
 
 
 /*
