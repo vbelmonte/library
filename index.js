@@ -37,7 +37,6 @@ function removeNoBooksWindow() {
 
 function addCardToLibraryGrid(card) {
     document.getElementsByClassName("grid-container")[0].appendChild(card);
-
 }
 
 
@@ -54,6 +53,12 @@ function processBook() {
     addCardToLibraryGrid(bookCard);
 }
 
+function preventDefaultButton() {
+    let addBookButton = document.getElementById("add-book");
+    addBookButton.addEventListener("click", function(event) {
+        event.preventDefault();
+    });
+}
 
 
 
@@ -249,3 +254,6 @@ function closeModal() {
     let addBookModal = document.getElementById("myModal");
     addBookModal.style.display = "none";
 }
+
+
+preventDefaultButton();
