@@ -282,4 +282,55 @@ function closeModal() {
 }
 
 
+
+
+/**
+ * Statistics functions
+ */
+
+function getTotalBooks() {
+    let totalBooks = myLibrary.length;
+    document.getElementById("your-books").innerHTML = totalBooks;
+}
+
+function getTotalPagesRead() {
+    let totalPages = 0;
+
+    for(i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].readStatus === "read")
+        totalPages = totalPages + parseInt(myLibrary[i].pages);
+    }
+
+    document.getElementById("pages-read").innerHTML = totalPages;
+}
+
+function getBooksRead() {
+    let booksRead = 0;
+
+    for(i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].readStatus === "read") {
+            booksRead++;
+        }
+    }
+
+    document.getElementById("books-read").innerHTML = booksRead;
+}
+
+function getBooksInProgress() {
+    let inProgress = 0;
+
+    for(i = 0; i < myLibrary.length; i++) {
+        if (myLibrary[i].readStatus === "in-progress") {
+            inProgress++;
+        }
+    }
+    document.getElementById("in-progress").innerHTML = inProgress;
+}
+
+
+getTotalBooks();
+getTotalPagesRead();
+getBooksRead();
+getBooksInProgress();
+
 preventDefaultButton();
