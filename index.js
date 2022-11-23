@@ -7,6 +7,11 @@ let pages = document.getElementById("number-of-pages");
 let genre = document.getElementById("genre");
 let readStatus = document.getElementsByName("status");
 
+let totalBooks = 0;
+let booksRead = 0;
+let booksInProgress = 0;
+let pagesRead = 0;
+
 function Book(title, author, publicationDate, pages, genre, readStatus) {
     // the constructor...
     this.title = title;
@@ -66,6 +71,9 @@ function processBook() {
     
     addBookToLibrary(bookInfo);
     addCardToLibraryGrid(bookCard);
+
+    updateStats(bookInfo);
+
     enableSuccessMsg();
     clearInputForms();
 }
@@ -279,6 +287,7 @@ function closeModal() {
     let addBookModal = document.getElementById("myModal");
     addBookModal.style.display = "none";
     disableSuccessMsg();
+    clearInputForms();
 }
 
 
@@ -325,6 +334,39 @@ function getBooksInProgress() {
         }
     }
     document.getElementById("in-progress").innerHTML = inProgress;
+}
+
+function incrementTotalBooks() {
+    totalBooks++;
+    document.getElementById("your-books").innerHTML = totalBooks;
+}
+
+function incrementBooksRead(book) {
+    if (book.readStatus === "read") {
+        booksRead++;
+        document.getElementById("books-read").innerHTML = booksRead;
+    }
+}
+
+function incrementBooksInProgress(book) {
+    if (book.readStatus === "in-progress") {
+        booksInProgress++;
+        document.getElementById("in-progress").innerHTML = booksInProgress;
+    }
+}
+
+function incrementPagesRead(book) {
+    if (book.readStatus === "read") {
+        pagesRead = pagesRead + parseInt(book.pages);
+        document.getElementById("pages-read").innerHTML = pagesRead;
+    }
+}
+
+function updateStats(book) {
+    incrementTotalBooks();
+    incrementBooksRead(book);
+    incrementBooksInProgress(book);
+    incrementPagesRead(book);
 }
 
 
