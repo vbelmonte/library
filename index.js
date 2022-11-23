@@ -1,5 +1,12 @@
 let myLibrary = [];
 
+let title = document.getElementById("title");
+let author = document.getElementById("author");
+let publicationYear = document.getElementById("publication-year");
+let pages = document.getElementById("number-of-pages");
+let genre = document.getElementById("genre");
+let readStatus = document.getElementsByName("status");
+
 function Book(title, author, publicationDate, pages, genre, readStatus) {
     // the constructor...
     this.title = title;
@@ -13,7 +20,6 @@ function Book(title, author, publicationDate, pages, genre, readStatus) {
 function addBookToLibrary(book) {
     // do stuff here
     myLibrary.push(book);
-
 }
 
 function removeNoBooksWindow() {
@@ -33,6 +39,79 @@ function addCardToLibraryGrid(card) {
     document.getElementsByClassName("grid-container")[0].appendChild(card);
 
 }
+
+
+
+
+/**
+ * Process and Submit Book functions
+ */
+function processBook() {
+    let bookInfo = collectBookInfo();
+    let bookCard = makeBookCard(bookInfo);
+    
+    addBookToLibrary(bookInfo);
+    addCardToLibraryGrid(bookCard);
+}
+
+
+
+
+
+/**
+ * Book Information Collector functions
+ */
+
+function collectBookInfo() {
+   let title = getTitle();
+   let author = getAuthor()
+   let publicationYear = getPublicationYear();
+   let pages = getPages();
+   let genre = getGenre();
+   let status = getStatus();
+
+   let book = new Book(title, author, publicationYear, pages, genre, status);
+
+   return book;
+}
+
+function getTitle() {
+    return title.value;
+}
+
+function getAuthor() {
+    return author.value;
+}
+
+function getPublicationYear() {
+    return publicationYear.value;
+}
+
+function getPages() {
+    return pages.value
+}
+
+function getGenre() {
+    return genre.value;
+}
+
+function getStatus() {
+    let statusResult = null;
+
+    for (i = 0; i < readStatus.length; i++) {
+        if (readStatus[i].checked) {
+            statusResult = readStatus[i].value;
+            break;
+        }
+    }
+    
+    return statusResult;
+}
+
+
+/**
+ * Book Card creator functions
+ */
 
 function makeBookCard(book) {
     let cardElement = document.createElement("div");
@@ -151,6 +230,7 @@ function createGenreElement(genreName) {
 }
 
 
+
 /**
  * Add Book Button
  */
@@ -164,7 +244,6 @@ function openAddModal() {
 /**
  * Add Book Modal Window Functions
  */
-
 
 function closeModal() {
     let addBookModal = document.getElementById("myModal");
