@@ -274,6 +274,7 @@ nav ul {
 
 .add-card:hover {
     background-color: #1f2937;
+    cursor: pointer;
 }
 
 .add-card svg {
