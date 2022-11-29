@@ -417,7 +417,15 @@ Modal Box
     visibility: hidden;
 }
 
-.modal-content .success-message p, .modal-content .clear-message p {
+.modal-content .error-message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #dc2626;
+    visibility: hidden;
+}
+
+.modal-content .success-message p, .modal-content .clear-message p, .modal-content .error-message p {
     font-size: 0.875rem;
     line-height: 0;
 }

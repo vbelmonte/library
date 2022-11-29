@@ -117,14 +117,20 @@ function processBook(event) {
         updateStats(bookInfo);
 
         disableClearMsg();
+        disableErrorMsg();
         enableSuccessMsg();
         clearInputForms();
+    }
+    else {
+        disableClearMsg();
+        enableErrorMsg();
     }
 }
 
 function clearInputs(event) {
     preventDefaultButton(event);
     disableSuccessMsg();
+    disableErrorMsg();
     enableClearMsg();
     title.value = "";
     author.value = "";
@@ -178,6 +184,16 @@ function enableClearMsg() {
 function disableClearMsg() {
     document.getElementsByClassName("clear-message")[0].style.visibility = "hidden";
     document.getElementsByClassName("clear-message")[0].style.display = "none";
+}
+
+function enableErrorMsg() {
+    document.getElementsByClassName("error-message")[0].style.visibility = "visible";
+    document.getElementsByClassName("error-message")[0].style.display = "flex";
+}
+
+function disableErrorMsg() {
+    document.getElementsByClassName("error-message")[0].style.visibility = "hidden";
+    document.getElementsByClassName("error-message")[0].style.display = "none";
 }
 
 
