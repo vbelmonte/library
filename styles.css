@@ -441,11 +441,13 @@ label, legend {
     padding: 4px 0px;
 }
 
-input[type=text] {
+input[type=text], input[type=number] {
     appearance: none;
 }
 
-input[type=text], select {
+input[type=text],
+input[type=number],
+select {
     border: solid 1px #D1D5DB;
     border-radius: 4px;
     padding: 8px;
