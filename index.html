@@ -100,31 +100,32 @@
                     <form method="post">
                         <div>
                             <label for="title">Title</label>
-                            <input type="text" id="title" name="title" placeholder="Book Title" required>
+                            <input type="text" id="title" class="input" name="title" placeholder="Book Title" required>
                         </div>
                         <div>
                             <label for="author">Author</label>
-                            <input type="text" id="author" name="author" placeholder="Author" required>
+                            <input type="text" id="author" class="input" name="author" placeholder="Author" required>
                         </div>
                         <div class="publication-pages">
                             <div>
                                 <label for="publication-year">Publication Year</label>
-                                <input type="text" id="publication-year" name="publication_year" placeholder="Publication Year" required>
+                                <input type="text" id="publication-year" class="input" name="publication_year" placeholder="Publication Year" required>
                             </div>
                             <div>
                                 <label for="number-of-pages">Number Of Pages</label>
-                                <input type="text" id="number-of-pages" name="number_of_pages" placeholder="0" required>
+                                <input type="text" id="number-of-pages" class="input" name="number_of_pages" placeholder="0" required>
                             </div>
                         </div>
                         <div>
                             <label for="genre">Genre</label>
-                            <select id="genre" name="genre">
+                            <select id="genre" class="input" name="genre">
+                                <option value="" selected disabled>Select genre</option>
                                 <optgroup label="Fiction">
                                     <option>Drama</option>
                                     <option>Fable</option>
                                     <option value="fairy-tale">Fairy Tale</option>
                                     <option>Fantasy</option>
-                                    <option selected>Fiction</option>
+                                    <option>Fiction</option>
                                     <option>Folklore</option>
                                     <option value="historical-fiction">Historical Fiction</option>
                                     <option>Horror</option>
@@ -153,15 +154,15 @@
                                 <legend>Status</legend>
                                 <div>
                                     <div>
-                                        <input type="radio" id="not-read" name="status" value="not-read">
+                                        <input type="radio" id="not-read" class="input" name="status" value="not-read">
                                         <label for="not-read">Not Read</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="read" name="status" value="read">
+                                        <input type="radio" id="read" class="input" name="status" value="read">
                                         <label for="read">Read</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="inprogress" name="status" value="in-progress">
+                                        <input type="radio" id="inprogress" class="input" name="status" value="in-progress">
                                         <label for="inprogress">In Progress</label>
                                     </div>
                                 </div>

@@ -59,6 +59,10 @@ function uncheckRadioButtons() {
     }
 }
 
+function checkEmptyInput() {
+    
+}
+
 
 
 
@@ -375,4 +379,4 @@ getTotalPagesRead();
 getBooksRead();
 getBooksInProgress();
 
-preventDefaultButton();
+/*preventDefaultButton();*/
