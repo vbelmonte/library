@@ -60,7 +60,56 @@ function uncheckRadioButtons() {
 }
 
 function checkEmptyInput() {
+    let inputs = document.getElementsByClassName("input");
+    let result = true;
+    let result1 = true;
+    let result2 = true;
+    let i = 0;
+
+    while (i < inputs.length) {
+        console.log("i: " + i);
+
+        if (inputs[i].type !== "radio") {
+            if (inputs[i].value === "") {
+                result1 = false;
+                break;
+            }
+        }
+        else {
+            if (inputs[i].checked === true) {
+                result2 = true;
+                break;
+            }
+            else {
+                result2 = false;
+            }
+        }
+        /*if (inputs[i].type === "radio") {
+            if (inputs[i].checked === true) {
+                result = true;
+                break;
+            }
+            else {
+                result = false;
+            }
+        }
+        else {
+            if (inputs[i].value === false) {
+                result = false;
+                break;
+            }
+        }*/
+        i++;
+    }
+
+    if (result1 === true && result2 === true) {
+        result = true;
+    }
+    else {
+        result = false;
+    }
     
+    return result;
 }
 
 
@@ -69,24 +118,33 @@ function checkEmptyInput() {
 /**
  * Process and Submit Book functions
  */
-function processBook() {
+function processBook(event) {
     let bookInfo = collectBookInfo();
     let bookCard = makeBookCard(bookInfo);
     
-    addBookToLibrary(bookInfo);
-    addCardToLibraryGrid(bookCard);
+    if (checkEmptyInput() === true) {
+        console.log("inputs are non-empty");
+        /*preventDefaultButton();*/
+        preventDefaultButton(event);
+        addBookToLibrary(bookInfo);
+        addCardToLibraryGrid(bookCard);
 
-    updateStats(bookInfo);
+        updateStats(bookInfo);
 
-    enableSuccessMsg();
-    clearInputForms();
+        enableSuccessMsg();
+        clearInputForms();
+    }
 }
 
-function preventDefaultButton() {
+/*function preventDefaultButton() {
     let addBookButton = document.getElementById("add-book");
     addBookButton.addEventListener("click", function(event) {
         event.preventDefault();
     });
+}*/
+
+function preventDefaultButton(event) {
+    event.preventDefault();
 }
 
 function enableSuccessMsg() {
@@ -378,5 +436,3 @@ getTotalBooks();
 getTotalPagesRead();
 getBooksRead();
 getBooksInProgress();
-
-/*preventDefaultButton();*/

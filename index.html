@@ -118,7 +118,7 @@
                         </div>
                         <div>
                             <label for="genre">Genre</label>
-                            <select id="genre" class="input" name="genre">
+                            <select id="genre" class="input" name="genre" required>
                                 <option value="" selected disabled>Select genre</option>
                                 <optgroup label="Fiction">
                                     <option>Drama</option>
@@ -154,22 +154,22 @@
                                 <legend>Status</legend>
                                 <div>
                                     <div>
-                                        <input type="radio" id="not-read" class="input" name="status" value="not-read">
+                                        <input type="radio" id="not-read" class="input" name="status" value="not-read" required>
                                         <label for="not-read">Not Read</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="read" class="input" name="status" value="read">
+                                        <input type="radio" id="read" class="input" name="status" value="read" required>
                                         <label for="read">Read</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="inprogress" class="input" name="status" value="in-progress">
+                                        <input type="radio" id="inprogress" class="input" name="status" value="in-progress" required>
                                         <label for="inprogress">In Progress</label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="input-buttons">
-                            <button class="md-btn orange-btn" id="add-book" onclick="processBook()">Add Book</button>
+                            <button class="md-btn orange-btn" id="add-book" onclick="processBook(event)">Add Book</button>
                             <button class="md-btn red-btn" id="clear">Clear</button>
                         </div>
                     </form>
