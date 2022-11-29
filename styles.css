@@ -402,14 +402,22 @@ Modal Box
 }
 
 .modal-content .success-message {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     color: #15803D;
     visibility: hidden;
 }
 
-.modal-content .success-message p {
+.modal-content .clear-message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color:#EA580C;
+    visibility: hidden;
+}
+
+.modal-content .success-message p, .modal-content .clear-message p {
     font-size: 0.875rem;
     line-height: 0;
 }

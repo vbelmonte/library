@@ -44,21 +44,6 @@ function addCardToLibraryGrid(card) {
     document.getElementsByClassName("grid-container")[0].appendChild(card);
 }
 
-function clearInputForms() {
-    title.value = "";
-    author.value = "";
-    publicationYear.value = "";
-    pages.value = "";
-    genre.value = "Fiction";
-    uncheckRadioButtons();
-}
-
-function uncheckRadioButtons() {
-    for (i = 0; i < readStatus.length; i++) {
-        readStatus[i].checked = false;
-    }
-}
-
 function checkEmptyInput() {
     let inputs = document.getElementsByClassName("input");
     let result = true;
@@ -116,7 +101,7 @@ function checkEmptyInput() {
 
 
 /**
- * Process and Submit Book functions
+ * Process, Submit, and Clear Book functions
  */
 function processBook(event) {
     let bookInfo = collectBookInfo();
@@ -131,8 +116,36 @@ function processBook(event) {
 
         updateStats(bookInfo);
 
+        disableClearMsg();
         enableSuccessMsg();
         clearInputForms();
+    }
+}
+
+function clearInputs(event) {
+    preventDefaultButton(event);
+    disableSuccessMsg();
+    enableClearMsg();
+    title.value = "";
+    author.value = "";
+    publicationYear.value = "";
+    pages.value = "";
+    genre.value = "";
+    uncheckRadioButtons();
+}
+
+function clearInputForms() {
+    title.value = "";
+    author.value = "";
+    publicationYear.value = "";
+    pages.value = "";
+    genre.value = "";
+    uncheckRadioButtons();
+}
+
+function uncheckRadioButtons() {
+    for (i = 0; i < readStatus.length; i++) {
+        readStatus[i].checked = false;
     }
 }
 
@@ -149,10 +162,22 @@ function preventDefaultButton(event) {
 
 function enableSuccessMsg() {
     document.getElementsByClassName("success-message")[0].style.visibility = "visible";
+    document.getElementsByClassName("success-message")[0].style.display = "flex";
 }
 
 function disableSuccessMsg() {
     document.getElementsByClassName("success-message")[0].style.visibility = "hidden";
+    document.getElementsByClassName("success-message")[0].style.display = "none";
+}
+
+function enableClearMsg() {
+    document.getElementsByClassName("clear-message")[0].style.visibility = "visible";
+    document.getElementsByClassName("clear-message")[0].style.display = "flex";
+}
+
+function disableClearMsg() {
+    document.getElementsByClassName("clear-message")[0].style.visibility = "hidden";
+    document.getElementsByClassName("clear-message")[0].style.display = "none";
 }
 
 
@@ -349,6 +374,7 @@ function closeModal() {
     let addBookModal = document.getElementById("myModal");
     addBookModal.style.display = "none";
     disableSuccessMsg();
+    disableClearMsg();
     clearInputForms();
 }
 
