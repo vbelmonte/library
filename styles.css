@@ -65,6 +65,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 500;
+    line-height: 
 }
 
 h3 {
@@ -185,6 +186,10 @@ header {
     gap: 80px;
 }
 
+.header-nav {
+    display: none;
+}
+
 .account {
     border-radius: 50%;
     width: 50px;
@@ -247,6 +252,7 @@ nav ul {
 
 .library-sort {
     display: flex;
+    justify-content: center;
 }
 
 .library-sort h3 {
@@ -616,6 +622,10 @@ form .input-buttons {
     footer {
         gap: 16px;
     }
+
+    h1#header-headline {
+        line-height: 3.2rem;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -628,7 +638,7 @@ form .input-buttons {
     }
 
     .header-image img {
-        width: 200px;
+        width: 250px;
     }
     
     #about, footer {
