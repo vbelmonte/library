@@ -332,6 +332,11 @@ p.title {
     font-weight: 200;
 }
 
+#about .content {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -560,4 +565,65 @@ form .input-buttons {
 #clear {
     flex: 1;
     flex-shrink: 0;
+}
+
+
+
+
+
+/** 
+* BREAKPOINTS
+*/
+
+@media only screen and (max-width: 1024px) {
+    .header-bar {
+        padding: 20px 40px;
+    }
+    
+    .header-cta, #achievements, #library {
+        padding: 80px 80px;
+    }
+    
+    #about, footer {
+        padding: 80px 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-cta, #achievements, #library {
+        padding: 40px 40px;
+    }
+
+    .header-cta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #about, footer {
+        padding: 40px 80px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header-bar {
+        padding: 20px 20px;
+    }
+    
+    .header-cta, #achievements, #library {
+        padding: 40px 20px;
+    }
+
+    .header-image img {
+        width: 200px;
+    }
+    
+    #about, footer {
+        padding: 40px 20px;
+    }
 }
