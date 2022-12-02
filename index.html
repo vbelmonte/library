@@ -98,75 +98,88 @@
                 </div>
                 <div class="input-fields">
                     <form method="post">
-                        <div>
-                            <label for="title">Title</label>
-                            <input type="text" id="title" class="input" name="title" placeholder="Book Title" required>
-                        </div>
-                        <div>
-                            <label for="author">Author</label>
-                            <input type="text" id="author" class="input" name="author" placeholder="Author" required>
-                        </div>
-                        <div class="publication-pages">
-                            <div>
-                                <label for="publication-year">Publication Year</label>
-                                <input type="number" min="0" id="publication-year" class="input" name="publication_year" placeholder="Publication Year" required>
-                            </div>
-                            <div>
-                                <label for="number-of-pages">Number Of Pages</label>
-                                <input type="number" min="0" id="number-of-pages" class="input" name="number_of_pages" placeholder="0" required>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="genre">Genre</label>
-                            <select id="genre" class="input" name="genre" required>
-                                <option value="" selected disabled>Select genre</option>
-                                <optgroup label="Fiction">
-                                    <option>Drama</option>
-                                    <option>Fable</option>
-                                    <option value="fairy-tale">Fairy Tale</option>
-                                    <option>Fantasy</option>
-                                    <option>Fiction</option>
-                                    <option>Folklore</option>
-                                    <option value="historical-fiction">Historical Fiction</option>
-                                    <option>Horror</option>
-                                    <option>Humor</option>
-                                    <option>Legend</option>
-                                    <option>Mystery</option>
-                                    <option>Mythology</option>
-                                    <option>Poetry</option>
-                                    <option value="realistic-fiction">Realistic Fiction</option>
-                                    <option value="science-fiction">Science Fiction</option>
-                                    <option value="short-story">Short Story</option>
-                                    <option value="tall-tale">Tall Tale</option>
-                                </optgroup>
-                                <optgroup label="Nonfiction">
-                                    <option>Autobiography</option>
-                                    <option>Biography</option>
-                                    <option>Essay</option>
-                                    <option>Narrative</option>
-                                    <option>Nonfiction</option>
-                                    <option>Speech</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div>
-                            <fieldset>
-                                <legend>Status</legend>
+                        <div class="inputs">
+                            <div class="input-left">
                                 <div>
+                                    <label for="title">Title</label>
+                                    <input type="text" id="title" class="input" name="title" placeholder="Book Title" required>
+                                </div>
+                                <div>
+                                    <label for="author">Author</label>
+                                    <input type="text" id="author" class="input" name="author" placeholder="Author" required>
+                                </div>
+                                <div id = "publication-pages">
                                     <div>
-                                        <input type="radio" id="not-read" class="input" name="status" value="not-read" required>
-                                        <label for="not-read">Not Read</label>
+                                        <label for="publication-year">Publication Year</label>
+                                        <input type="number" min="0" id="publication-year" class="input" name="publication_year" placeholder="Publication Year" required>
                                     </div>
                                     <div>
-                                        <input type="radio" id="read" class="input" name="status" value="read" required>
-                                        <label for="read">Read</label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" id="inprogress" class="input" name="status" value="in-progress" required>
-                                        <label for="inprogress">In Progress</label>
+                                        <label for="number-of-pages">Number Of Pages</label>
+                                        <input type="number" min="0" id="number-of-pages" class="input" name="number_of_pages" placeholder="0" required>
                                     </div>
                                 </div>
-                            </fieldset>
+                                <div>
+                                    <label for="genre">Genre</label>
+                                    <select id="genre" class="input" name="genre" required>
+                                        <option value="" selected disabled>Select genre</option>
+                                        <optgroup label="Fiction">
+                                            <option>Drama</option>
+                                            <option>Fable</option>
+                                            <option value="fairy-tale">Fairy Tale</option>
+                                            <option>Fantasy</option>
+                                            <option>Fiction</option>
+                                            <option>Folklore</option>
+                                            <option value="historical-fiction">Historical Fiction</option>
+                                            <option>Horror</option>
+                                            <option>Humor</option>
+                                            <option>Legend</option>
+                                            <option>Mystery</option>
+                                            <option>Mythology</option>
+                                            <option>Poetry</option>
+                                            <option value="realistic-fiction">Realistic Fiction</option>
+                                            <option value="science-fiction">Science Fiction</option>
+                                            <option value="short-story">Short Story</option>
+                                            <option value="tall-tale">Tall Tale</option>
+                                        </optgroup>
+                                        <optgroup label="Nonfiction">
+                                            <option>Autobiography</option>
+                                            <option>Biography</option>
+                                            <option>Essay</option>
+                                            <option>Narrative</option>
+                                            <option>Nonfiction</option>
+                                            <option>Speech</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div>
+                                    <fieldset>
+                                        <legend>Status</legend>
+                                        <div>
+                                            <div>
+                                                <input type="radio" id="not-read" class="input" name="status" value="not-read" required>
+                                                <label for="not-read">Not Read</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="read" class="input" name="status" value="read" required>
+                                                <label for="read">Read</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="inprogress" class="input" name="status" value="in-progress" required>
+                                                <label for="inprogress">In Progress</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="input-right">
+                                <div class="preview">
+                                    <img id="file-ip-1-preview">
+                                </div>
+                                <div>
+                                    <label for="bookcover">Upload Bookcover (Optional)</label>
+                                    <input type="file" id="bookcover" name="bookcover" accept="image/*">
+                                </div>
+                            </div>
                         </div>
                         <div class="input-buttons">
                             <button class="md-btn orange-btn" id="add-book" onclick="processBook(event)">Add Book</button>
