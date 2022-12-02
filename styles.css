@@ -598,15 +598,23 @@ form .input-buttons {
         display: flex;
         flex-direction: column;
     }
+    
+    #achievements {
+        gap: 16px;
+    }
 
     .stats {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 32px;
     }
 
     #about, footer {
         padding: 40px 80px;
+    }
+
+    footer {
+        gap: 16px;
     }
 }
 
