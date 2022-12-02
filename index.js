@@ -6,13 +6,15 @@ let publicationYear = document.getElementById("publication-year");
 let pages = document.getElementById("number-of-pages");
 let genre = document.getElementById("genre");
 let readStatus = document.getElementsByName("status");
+let bookcoverImage = document.getElementById("bookcover-img");
+let bookcover = document.getElementById("bookcover");
 
 let totalBooks = 0;
 let booksRead = 0;
 let booksInProgress = 0;
 let pagesRead = 0;
 
-function Book(title, author, publicationDate, pages, genre, readStatus) {
+function Book(title, author, publicationDate, pages, genre, readStatus, bookcover) {
     // the constructor...
     this.title = title;
     this.author = author;
@@ -20,6 +22,7 @@ function Book(title, author, publicationDate, pages, genre, readStatus) {
     this.pages = pages;
     this.genre = genre;
     this.readStatus = readStatus;
+    this.bookcover = bookcover;
 }
 
 function addBookToLibrary(book) {
@@ -137,6 +140,9 @@ function clearInputs(event) {
     publicationYear.value = "";
     pages.value = "";
     genre.value = "";
+    bookcover.value = "";
+    bookcoverImage.src = "";
+    bookcoverImage.style.display = "none";
     uncheckRadioButtons();
 }
 
@@ -146,6 +152,9 @@ function clearInputForms() {
     publicationYear.value = "";
     pages.value = "";
     genre.value = "";
+    bookcover.value = "";
+    bookcoverImage.src = "";
+    bookcoverImage.style.display = "none";
     uncheckRadioButtons();
 }
 
@@ -210,8 +219,9 @@ function collectBookInfo() {
    let pages = getPages();
    let genre = getGenre();
    let status = getStatus();
+   let bookcover = getBookCover();
 
-   let book = new Book(title, author, publicationYear, pages, genre, status);
+   let book = new Book(title, author, publicationYear, pages, genre, status, bookcover);
 
    return book;
 }
@@ -236,6 +246,10 @@ function getGenre() {
     return genre.value;
 }
 
+function getBookCover() {
+    return bookcoverImage.src;
+}
+
 function getStatus() {
     let statusResult = null;
 
@@ -250,13 +264,23 @@ function getStatus() {
 }
 
 
+function showPreview(event) {
+    if (event.target.files.length > 0) {
+      var src = URL.createObjectURL(event.target.files[0]);
+      var preview = document.getElementById("bookcover-img");
+      preview.src = src;
+      preview.style.display = "block";
+    }
+}
+
+
 /**
  * Book Card creator functions
  */
 
 function makeBookCard(book) {
     let cardElement = document.createElement("div");
-    let coverElement = createBookCoverElement();
+    let coverElement = createBookCoverElement(book);
     let descriptionElement = createBookDescriptionElement(book);
 
     cardElement.classList.add("book-card");
@@ -267,9 +291,11 @@ function makeBookCard(book) {
     return cardElement;
 }
 
-function createBookCoverElement() {
+function createBookCoverElement(book) {
     let div = document.createElement("div");
     div.classList.add("cover");
+    div.style.background = "url('" + book.bookcover + "')";
+    div.style.backgroundPosition = "top";
 
     return div;
 }
