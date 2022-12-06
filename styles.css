@@ -463,6 +463,7 @@ select {
     border: solid 1px #D1D5DB;
     border-radius: 4px;
     padding: 8px;
+    box-sizing: border-box;
 
     font-family: "Josefin Sans", "Arial", sans-serif;
     font-size: 1rem;
@@ -471,6 +472,7 @@ select {
 
 input[type=file] {
     padding: 4px;
+    width: 100%;
 }
 
 .input-right > .preview {
@@ -503,7 +505,8 @@ option {
 }
 
 .input-left, .input-right {
-    width: 320px;
+    width: 100%;
+    /*min-width: 200px;*/
     gap: 16px;
 }
 
@@ -522,7 +525,10 @@ option {
 #publication-pages > div {
     display: flex;
     flex-direction: column;
-    width: 152px;
+}
+
+#publication-year, #number-of-pages {
+    width: 100%;
 }
 
 .input-fields form {
@@ -595,7 +601,49 @@ form .input-buttons {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .modal-content {
+        background-color: #FAF9F9;
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    .input-left, .input-right {
+        width: 100%;
+        flex: 1;
+        gap: 16px;
+    }
+
+    #publication-pages {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    #publication-pages > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-right > .preview > img {
+        margin: 0 auto;
+        width: fit-content;
+        height: 100%;
+    }
+
+    .input-right > .preview {
+        width: 100%;
+        height: 120px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 100%;
+    }
+
     .header-cta, #achievements, #library {
         padding: 40px 40px;
     }
@@ -626,6 +674,15 @@ form .input-buttons {
     h1#header-headline {
         line-height: 3.2rem;
     }
+
+    #publication-pages > div {
+        width: 100%;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -643,5 +700,17 @@ form .input-buttons {
     
     #about, footer {
         padding: 40px 20px;
+    }
+
+    .input-fields form {
+        padding: 0px;
+    }
+
+    #publication-pages {
+        flex-direction: column;
+    }
+
+    fieldset div {
+        flex-direction: column;
     }
 }
