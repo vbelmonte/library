@@ -1,55 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}*/
-/* HTML5 display-role reset for older browsers */
-/*article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}*/
-
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -65,6 +13,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 500;
+    line-height: 1.8rem;
 }
 
 h3 {
@@ -185,6 +134,10 @@ header {
     gap: 80px;
 }
 
+.header-nav {
+    display: none;
+}
+
 .account {
     border-radius: 50%;
     width: 50px;
@@ -247,6 +200,7 @@ nav ul {
 
 .library-sort {
     display: flex;
+    justify-content: center;
 }
 
 .library-sort h3 {
@@ -257,6 +211,7 @@ nav ul {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 400px;
     margin: 40px 0px;
 }
 
@@ -269,7 +224,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     background-color: #374151;
-    height: 492px;
+    height: 100%;
 }
 
 .add-card:hover {
@@ -282,6 +237,8 @@ nav ul {
 }
 
 .book-card {
+    display: flex;
+    flex-direction: column;
     background-color: orange;
     border: solid 1px #D1D5DB;
     overflow: hidden;
@@ -289,7 +246,7 @@ nav ul {
 
 .book-card .cover, .cover {
     text-align: center;
-    height: 350px;
+    flex: 1;
 }
 
 .book-card .description, .description {
@@ -330,6 +287,11 @@ p.title {
     line-height: 2rem;
 
     font-weight: 200;
+}
+
+#about .content {
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 footer {
@@ -452,6 +414,7 @@ select {
     border: solid 1px #D1D5DB;
     border-radius: 4px;
     padding: 8px;
+    box-sizing: border-box;
 
     font-family: "Josefin Sans", "Arial", sans-serif;
     font-size: 1rem;
@@ -460,6 +423,7 @@ select {
 
 input[type=file] {
     padding: 4px;
+    width: 100%;
 }
 
 .input-right > .preview {
@@ -476,11 +440,6 @@ option {
     padding: 8px;
 }
 
-/*form > div{
-    display: flex;
-    flex-direction: column;
-}*/
-
 .inputs {
     display: flex;
     gap: 16px;
@@ -492,15 +451,9 @@ option {
 }
 
 .input-left, .input-right {
-    width: 320px;
+    width: 100%;
     gap: 16px;
 }
-
-/*.publication-pages > div{
-    display: flex;
-    flex-direction: column;
-    width: 152px;
-}*/
 
 #publication-pages {
     display: flex;
@@ -511,7 +464,10 @@ option {
 #publication-pages > div {
     display: flex;
     flex-direction: column;
-    width: 152px;
+}
+
+#publication-year, #number-of-pages {
+    width: 100%;
 }
 
 .input-fields form {
@@ -560,4 +516,146 @@ form .input-buttons {
 #clear {
     flex: 1;
     flex-shrink: 0;
+}
+
+
+
+
+
+/** 
+* BREAKPOINTS
+*/
+
+@media only screen and (max-width: 1024px) {
+    .header-bar {
+        padding: 20px 40px;
+    }
+    
+    .header-cta, #achievements, #library {
+        padding: 80px 80px;
+    }
+    
+    #about, footer {
+        padding: 80px 80px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .modal-content {
+        background-color: #FAF9F9;
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    .input-left, .input-right {
+        width: 100%;
+        flex: 1;
+        gap: 16px;
+    }
+
+    #publication-pages {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    #publication-pages > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-right > .preview > img {
+        margin: 0 auto;
+        width: fit-content;
+        height: 100%;
+    }
+
+    .input-right > .preview {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .header-cta, #achievements, #library {
+        padding: 40px 40px;
+    }
+
+    .header-cta {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #achievements {
+        gap: 16px;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    #about, footer {
+        padding: 40px 80px;
+    }
+
+    footer {
+        gap: 16px;
+    }
+
+    h1#header-headline {
+        line-height: 3.2rem;
+    }
+
+    #publication-pages > div {
+        width: 100%;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-auto-rows: 320px;
+        margin: 40px 0px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .header-bar {
+        padding: 20px 20px;
+    }
+    
+    .header-cta, #achievements, #library {
+        padding: 40px 20px;
+    }
+
+    .header-image img {
+        width: 250px;
+    }
+    
+    #about, footer {
+        padding: 40px 20px;
+    }
+
+    .input-fields form {
+        padding: 0px;
+    }
+
+    #publication-pages {
+        flex-direction: column;
+    }
+
+    fieldset div {
+        flex-direction: column;
+    }
 }
