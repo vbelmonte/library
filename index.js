@@ -72,21 +72,6 @@ function checkEmptyInput() {
                 result2 = false;
             }
         }
-        /*if (inputs[i].type === "radio") {
-            if (inputs[i].checked === true) {
-                result = true;
-                break;
-            }
-            else {
-                result = false;
-            }
-        }
-        else {
-            if (inputs[i].value === false) {
-                result = false;
-                break;
-            }
-        }*/
         i++;
     }
 
