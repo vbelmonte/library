@@ -296,6 +296,7 @@ function createBookCoverElement(book) {
     div.classList.add("cover");
     div.style.background = "url('" + book.bookcover + "')";
     div.style.backgroundPosition = "top";
+    div.style.backgroundSize = "cover";
 
     return div;
 }

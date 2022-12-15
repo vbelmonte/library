@@ -263,6 +263,7 @@ nav ul {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 400px;
     margin: 40px 0px;
 }
 
@@ -275,7 +276,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     background-color: #374151;
-    height: 492px;
+    height: 100%;
 }
 
 .add-card:hover {
@@ -288,6 +289,8 @@ nav ul {
 }
 
 .book-card {
+    display: flex;
+    flex-direction: column;
     background-color: orange;
     border: solid 1px #D1D5DB;
     overflow: hidden;
@@ -295,7 +298,8 @@ nav ul {
 
 .book-card .cover, .cover {
     text-align: center;
-    height: 350px;
+    /*height: 350px;*/
+    flex: 1;
 }
 
 .book-card .description, .description {
@@ -681,6 +685,12 @@ form .input-buttons {
 
     .inputs {
         flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-auto-rows: 320px;
+        margin: 40px 0px;
     }
 
 }
