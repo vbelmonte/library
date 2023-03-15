@@ -14,7 +14,7 @@ let booksRead = 0;
 let booksInProgress = 0;
 let pagesRead = 0;
 
-function Book(title, author, publicationDate, pages, genre, readStatus, bookcover) {
+/*function Book(title, author, publicationDate, pages, genre, readStatus, bookcover) {
     // the constructor...
     this.title = title;
     this.author = author;
@@ -23,6 +23,18 @@ function Book(title, author, publicationDate, pages, genre, readStatus, bookcove
     this.genre = genre;
     this.readStatus = readStatus;
     this.bookcover = bookcover;
+}*/
+
+class Book {
+    constructor(title, author, publicationDate, pages, genre, readStatus, bookcover) {
+        this.title = title;
+        this.author = author;
+        this.publicationDate = publicationDate;
+        this.pages = pages;
+        this.genre = genre;
+        this.readStatus = readStatus;
+        this.bookcover = bookcover;
+    }
 }
 
 function addBookToLibrary(book) {
